@@ -1,0 +1,12 @@
+
+<div class="items-container">
+    <div class="item">
+        <cdk-virtual-scroll-viewport  [itemSize]="12" class="example-viewport">
+            <img *cdkVirtualFor="let photo of photos" class="example-item" [src]="photo.thumbnailUrl" (click)="onImageClick(photo)">
+        </cdk-virtual-scroll-viewport>    
+    </div>
+    <div >
+        <img  [src]="selectedImage.url" alt="">
+    </div>    
+</div>
+  
